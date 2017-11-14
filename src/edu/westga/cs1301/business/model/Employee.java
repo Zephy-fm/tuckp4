@@ -23,10 +23,10 @@ public class Employee {
 	public String getJobTitle() {
 		return this.jobTitle;
 	}
-	public double hourlyWage() {
+	public double getHourlyWage() {
 		return this.hourlyWage;
 	}
-	public int rating() {
+	public int getRating() {
 		return this.rating;
 	}
 	
@@ -81,4 +81,10 @@ public class Employee {
 		this.rating = rating;
 		
 	}	
+	
+	public String toString() {
+		String returnMessage = this.name + ", " + this.yearOfHire + ", " + this.jobTitle;
+		return returnMessage;
+	}
+	
 }
