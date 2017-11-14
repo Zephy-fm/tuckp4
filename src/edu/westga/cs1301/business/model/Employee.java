@@ -52,7 +52,12 @@ public class Employee {
 		if (jobTitle == null) {
 			throw new IllegalArgumentException("jobTitle cannot be null");
 		}
-				
+		if ( name.equals("")) {
+			throw new IllegalArgumentException("name cannot be empty");
+		}
+		if (jobTitle.equals("")) {
+			throw new IllegalArgumentException("jobTitle cannot be empty");
+		}
 	}
 				
 	
