@@ -13,12 +13,21 @@ public class Employee {
 	
 	private static final double MINIMUM_WAGE = 7.25;
 	
-	private String getName() {
+	public String getName() {
 		return this.name;
 	}
 	
-	private int getYear() {
+	public int getYear() {
 		return this.yearOfHire;
+	}
+	public String getJobTitle() {
+		return this.jobTitle;
+	}
+	public double hourlyWage() {
+		return this.hourlyWage;
+	}
+	public int rating() {
+		return this.rating;
 	}
 	
 	/** Creates a default Employee
@@ -65,14 +74,11 @@ public class Employee {
 		if (rating > 5) {
 			throw new IllegalArgumentException("rating cannot be more than 5");
 		}
+		this.name = name;
+		this.yearOfHire = yearOfHire;
+		this.jobTitle = jobTitle;
+		this.hourlyWage = hourlyWage;
+		this.rating = rating;
 		
-		
-		
-		
-	}
-				
-	
-	
-	
-	
+	}	
 }
