@@ -6,7 +6,7 @@ public class Company {
 	private String name;
 	private ArrayList<Employee> employees;
 	
-	public int getSize() {
+	public int size() {
 		return this.employees.size();
 	}
 
