@@ -44,8 +44,6 @@ public class Employee {
 	 * @param rating must be between 1 to 5
 	 */
 	public Employee(String name, int yearOfHire, String jobTitle, double hourlyWage, int rating ) {
-		/// add name
-		/// add job title both cannot be null or empty
 		if (name == null) {
 			throw new IllegalArgumentException("name cannot be null");
 		}
@@ -58,6 +56,19 @@ public class Employee {
 		if (jobTitle.equals("")) {
 			throw new IllegalArgumentException("jobTitle cannot be empty");
 		}
+		if (yearOfHire < 1970) {
+			throw new IllegalArgumentException("yearOfHire cannot be less than 1970");
+		}
+		if (rating < 1) { 
+			throw new IllegalArgumentException("rating cannot be less than 1");
+		}
+		if (rating > 5) {
+			throw new IllegalArgumentException("rating cannot be more than 5");
+		}
+		
+		
+		
+		
 	}
 				
 	
