@@ -14,11 +14,11 @@ public class Employee {
 	private static final double MINIMUM_WAGE = 7.25;
 	
 	private String getName() {
-		return name;
+		return this.name;
 	}
 	
 	private int getYear() {
-		return yearOfHire;
+		return this.yearOfHire;
 	}
 	
 	/** Creates a default Employee
@@ -43,12 +43,17 @@ public class Employee {
 	 * @param hourlyWage >= MIN_WAGE
 	 * @param rating must be between 1 to 5
 	 */
-	public Employee( String name, int yearOfHire, String jobTitle, double hourlyWage, int rating ) {
+	public Employee(String name, int yearOfHire, String jobTitle, double hourlyWage, int rating ) {
 		/// add name
 		/// add job title both cannot be null or empty
-		
+		if (name == null) {
+			throw new IllegalArgumentException("name cannot be null");
+		}
+		if (jobTitle == null) {
+			throw new IllegalArgumentException("jobTitle cannot be null");
+		}
 				
-		
+	}
 				
 	
 	
